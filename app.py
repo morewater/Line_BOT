@@ -14,8 +14,8 @@ from linebot.exceptions import (
 from linebot.models import *
 
 app = Flask(__name__)
-line_bot_api = LineBotApi('YOUR_CHANNEL_ACCESS_TOKEN')
-handler = WebhookHandler('YOUR_CHANNEL_SECRET')
+line_bot_api = LineBotApi('6cadbee124b385860b3bb9b0d656ae42 ')
+handler = WebhookHandler('d+W7vmmE5aGTAGf/wSJkfIIglY/yyMgq9f0YOvUP1EfuIvNST0PLQmqD2lUSpLKtXfYUyTiw3vSvKuNy15oT33UuHu+igWkH8OMhcKqI3zJkO8W5Jk1luSjng5O7Qht1UYthzatQME3/0m8Q91TCigdB04t89/1O/w1cDnyilFU=')
 client_id = 'YOUR_IMGUR_CLIENT_ID'
 client_secret = 'YOUR_IMGUR__CLIENT_SECRET'
 album_id = 'YOUR_IMGUR_ALBUM_ID'
@@ -306,16 +306,16 @@ def handle_message(event):
             TextSendMessage(text=content))
         return 0
     if event.message.text == "隨便來張正妹圖片":
-        client = ImgurClient(client_id, client_secret)
-        images = client.get_album_images(album_id)
-        index = random.randint(0, len(images) - 1)
-        url = images[index].link.replace('http', 'https')
-        image_message = ImageSendMessage(
-            original_content_url=url,
-            preview_image_url=url
-        )
-        line_bot_api.reply_message(
-            event.reply_token, image_message)
+        # client = ImgurClient(client_id, client_secret)
+        # images = client.get_album_images(album_id)
+        # index = random.randint(0, len(images) - 1)
+        # url = images[index].link.replace('http', 'https')
+        # image_message = ImageSendMessage(
+        #     original_content_url=url,
+        #     preview_image_url=url
+        # )
+        # line_bot_api.reply_message(
+        #     event.reply_token, image_message)
         return 0
 
     if event.message.text == "近期熱門廢文":
@@ -477,17 +477,17 @@ def handle_message(event):
                     label='開始玩',
                     text='開始玩'
                 ),
-                URITemplateAction(
-                    label='影片介紹 阿肥bot',
-                    uri='https://youtu.be/1IxtWgWxtlE'
-                ),
+                # URITemplateAction(
+                #     label='影片介紹 阿肥bot',
+                #     uri='https://youtu.be/1IxtWgWxtlE'
+                # ),
                 URITemplateAction(
                     label='如何建立自己的 Line Bot',
                     uri='https://github.com/twtrubiks/line-bot-tutorial'
                 ),
                 URITemplateAction(
-                    label='聯絡作者',
-                    uri='https://www.facebook.com/TWTRubiks?ref=bookmarks'
+                    label='聯絡協順',
+                    uri='http://www.e-plating.com.tw'
                 )
             ]
         )
