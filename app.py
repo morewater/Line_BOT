@@ -481,10 +481,10 @@ def handle_message(event):
                 #     label='影片介紹 阿肥bot',
                 #     uri='https://youtu.be/1IxtWgWxtlE'
                 # ),
-                URITemplateAction(
-                    label='如何建立自己的 Line Bot',
-                    uri='https://github.com/twtrubiks/line-bot-tutorial'
-                ),
+                # URITemplateAction(
+                #     label='如何建立自己的 Line Bot',
+                #     uri='https://github.com/twtrubiks/line-bot-tutorial'
+                # ),
                 URITemplateAction(
                     label='聯絡協順',
                     uri='http://www.e-plating.com.tw'
